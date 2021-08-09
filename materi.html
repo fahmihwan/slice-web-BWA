@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+<style>
+        *{ margin: 0;
+            padding: 0;
+            font-family: montserrat,sans-serif;
+        }
+        html {
+      scroll-behavior: smooth;
+        }
+
+        main{
+            background-color:#0f0e20 ;
+            padding-top: 30px;
+            height: 300px;
+            
+        }
+          /* logo */
+          .logo img{
+            width: 70px;
+            float: left;
+        }
+
+        
+        /* navigasi */
+        .nav {float: right;          
+             padding:0px;
+             font-size: 18px;
+             
+            
+         }
+         .nav ul li .active {
+            color: orangered;
+            
+        }
+
+         .nav span{
+            background-color:#2b50b4;
+            color: white;
+            padding:2px;
+            width: 50px;
+            border-radius: 3px;
+            display: inline;
+            
+        }
+         .clear{clear: both;}
+         .nav :nth-child(4){
+             margin-right: -21px;
+         }
+         .nav :nth-child(3){
+             position: relative;
+             display: inline-block;
+         }
+         .nav :nth-child(5){
+             position: relative;
+             display: inline-block;        
+         }
+         
+
+         .nav :nth-child(3):hover .dropdown-child ul{
+             display: block;
+         }
+         .nav :nth-child(5):hover .dropdown-child2 ul{
+             display: block;
+         }
+         .nav ul{
+             line-height: 39px;
+         }
+         .nav ul li{
+             display: inline-block;
+             margin-left: 40px;
+         }
+         .nav a{
+            text-decoration: none;
+             color: white;
+             
+             
+         }
+         .dropdown-child{
+             position: absolute;
+             width: 115px;
+         }
+         .dropdown-child2{
+             position: absolute;
+             width: 155px;
+         }
+         .dropdown-child ul  {
+            display: none;
+            background-color:#f8f9fa;
+            text-align: left;
+            margin-left: -10px;
+            height: 90px;
+            padding: 10px;
+            border-radius: 4px;
+         }
+         .dropdown-child2 ul  {
+            display: none;
+            background-color:#f8f9fa;
+            text-align: left;
+            margin-left: -10px;
+            height: 140px;
+            padding: 10px;
+            border-radius: 4px;
+         }
+         .dropdown-child a{
+            color: black;
+            font-size: 17px;
+         }
+         .dropdown-child2 a{
+            color: black;
+            font-size: 17px;
+         }
+         .dropdown-child ul li{
+            margin-left: 20px;
+            margin-bottom: 10px;
+         }
+         .dropdown-child2 ul li{
+            margin-left: 20px;
+            margin-bottom: 10px;
+         }
+
+         .dropdown-child li:hover{
+             background-color: #d7f7f5;
+            
+         }
+         .dropdown-child2 li:hover{
+             background-color: #d7f7f5;
+            
+         }
+         .unnamed{
+            background-image: url("images/unnamed.png");
+            width: 40px;
+            height: 40px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            float: left;
+            border-radius: 27px;
+            margin-right: 10px;
+            line-height: 10px;
+         }
+
+
+
+
+        /* jumbotron */
+        .jumbotron{
+            text-align: center;
+            color: white;
+            margin: 0 130px;
+            height: 500px;
+        }
+        .jumbotron p{
+            color:grey;
+        }
+        .jumbotron h3{
+            margin-top:20px;
+            font-size: 30px;
+        }
+
+
+
+
+        .container{
+            margin: 0 130px;
+            border-radius: 10px;
+            
+        }
+        video{
+            width: 710px;
+            box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.4);
+            padding: 10px;
+            border-radius: 10px;
+            float: left;
+            background-color: #fefbf9;
+        }
+
+
+/* jumbotron2 */
+.jumbotron2{
+    
+    position: absolute;
+    z-index: -1;
+    height: 100px;
+    width: 100%;
+    background-color:#0f0e20 ;
+
+}
+/* list-group */
+        .list-group{
+            box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.4);
+            float: right;
+            overflow: hidden;
+            width: 300px;
+            border-radius: 10px;
+            box-sizing: border-box;
+            background-color: white;
+        }
+        .list-group ul li{
+            color: black;
+            padding: 10px;
+            font-size: 15px;
+            background-color: lightgoldenrodyellow;
+            background-color: #f5f7fa;
+            list-style-type: none;
+            margin-bottom: 10px;
+            margin-right:20px ;
+            margin-left: 20px;
+        }       
+        .list-group ul li:hover{
+            background-color: #d9d9d9;
+        }
+        .list-group p{
+            padding: 10px;
+        }
+
+        .list-group a{
+            text-decoration: none;
+        }
+        
+        .list-group button{
+            width: 300px;
+            height: 50px;
+            background-color: #2b50b4;
+            color: white;
+            border: 0px solid;
+            font-size: 20px;
+        }
+
+        /* content */
+        .content{
+            margin:50px 20px 0;
+            line-height: 30px;
+            width: 710px;
+            float:left;
+        }
+
+        .spek{
+            float: right;
+            width: 300px;
+            margin-top: 50px;
+        
+        }
+        .spek h5{
+            font-size: 18px;
+            margin-bottom: 2px;
+            font-weight:700;
+            opacity: 0.8;
+        }
+        .spek p {
+            font-size: 15px
+        }
+        .spek button{
+            border: 0px solid;
+            width: 230px;
+            border-radius: 5px;
+            height: 40px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .content .fa-check-circle{
+            color: #1abc9c;
+        }
+        .content tr td{
+            padding: 5px;
+        }
+
+
+        /* article */
+        article{
+            margin: 0 130px;
+        }
+        .artc1{
+            float: left;
+           
+            width: 340px;
+            margin-top: 110px;
+            margin-left: 30px;
+        }
+        .artc1 h3{
+            font-size: 30px;
+            color: #322f56;
+        
+        }
+        article p{
+            color: grey;
+        }
+        .artc2{
+            float:right;
+            
+        }
+        .artc2 .fa{
+            margin-bottom: 10px;
+        }
+        .artc2 h5{
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+        article td{
+            padding-left: 20px;
+            padding-right: 20px ;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+        article .fa{
+            color:#322f56;
+        }
+        .background{
+            background-color: #edeef3;
+            margin-top: 50px;
+            padding-top:50px;
+            padding-bottom: 50px;
+        }
+        
+        
+
+        /* card */
+        .content2{
+            margin: 0 130px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .card1 h3{
+            text-align: center;
+            margin-bottom: 20px;
+            color: #322f56;
+        }   
+        .card1 h1{
+            text-align: center;
+            margin-bottom: 20px;
+            font-size:43px;
+            color: #1abc9c;
+        }
+        .card1 button{
+            width: 100%;
+            height: 40px;
+            margin-top: 10px;
+            background-color: #2b50b4;
+            color: white;
+            border: 0px solid;
+            border-radius: 5px;
+        }
+        .card1 p{
+            text-align: center;
+        }
+        .card1{
+            padding: 20px;
+            border-radius: 10px;
+            width: 34%;
+            background-color: white;
+            box-shadow: 1px 1px 5px  rgba(0,0,0,0.3);
+            line-height: 20px;        
+        }
+        .card1 table{
+            color: black;
+            text-align: left;
+            display: block;
+        }
+        .card1 tr td{
+            padding: 10px;
+        }
+        .cek{
+            text-align: right;
+            width: 145px;
+            color: #1abc9c;
+            }
+        .background3{
+            height: 100px;
+            background-color: #edeef3;;
+            width: 100%;
+            position: absolute;
+            z-index: -2;
+        }
+
+        /* bawah */
+        .bot{
+            width: 1000px;
+            box-sizing: border-box;
+            margin:130px 230px 0px;
+            
+        }
+        .bot h3{
+            margin-bottom: 14px;
+            opacity: 0.8;
+        }
+        .bot a{
+            text-decoration: none;
+            color: #bdbdbd;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .bot a:hover {
+            text-decoration: underline;
+        }
+        .bot ul{
+            list-style-type:none ;
+        }
+        .fullktk img{
+            width: 40px;
+            margin-bottom: 10px;
+            
+        }
+        .fullktk{
+            box-sizing: border-box;
+
+            border: 0px solid;
+            float: left;
+            width: 280px;
+            height: 400px;
+            color: #bdbdbd;
+
+        }
+        .ktk{
+            width: 693px;
+            height: 400px;
+            float: right;
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            
+        }  
+        .ktk1{
+            border: 0px solid;
+            width: 50%;
+            height: 50%;
+            box-sizing: border-box;
+        }
+      
+        .ktk2{
+            width: 50%;
+            height: 50%;
+            box-sizing: border-box;
+        }
+        .ktk3{
+            border: 0px solid;
+            width: 50%;
+            height: 50%;
+            box-sizing: border-box;
+        }
+        .ktk4{
+            border: 0px solid;
+            width: 50%;
+            height: 50%;
+            box-sizing: border-box;
+        }
+
+
+        /* footer */
+        footer{
+            font-size:15px;
+            margin-top: 10px;
+            color: #bdbdbd ;
+            text-align: center;
+            margin-bottom: 50px;
+            background-color: #fefaf6;
+        }
+
+</style>
+</head>
+<body>
+    <main> 
+        <div class="jumbotron">
+            <div class="logo"><img src="images/KWUDEV.png" alt=""></div>  
+            <div class="nav">
+               <ul>
+                   <li><a href="langganan.html">Langganan <span>New</span></a></li>
+                   <li><a href="beranda.html" class="active">Kelas</a></li>
+                   <li><div class="dropdown">Belajar<i class="fa fa-sort-desc " aria-hidden="true" style="margin-left:2px;"></i></div> 
+                        <div class="dropdown-child">
+                            <ul>
+                                <li><a href="">Skill Path</a></li>
+                                <li><a href="">Sertifikat</a></li>
+                            </ul>  
+                        </div>
+                   </li> 
+                   <li>|</li>
+                   <li><a href=""><div class="unnamed"></div> Hi, Alfian Aji <i class="fa fa-sort-desc " aria-hidden="true" style="margin-left:2px;"></i></a>
+                    <div class="dropdown-child2">
+                        <ul>
+                            <li><a href="">Akun Saya</a></li>
+                            <li><a href="">Pengaturan</a></li>
+                            <li><a href="">Log Out</a></li>
+                        </ul>  
+                    </div>
+                   </li>
+               </ul>
+            </div>
+            <div class="clear"></div>
+            <br><br>
+            <h3>Kelas Online</h3>
+                <h3>Full-Stack Web Developer</h3>
+            
+            
+    </main>
+    <div class="jumbotron2"></div>
+    <div class="container">
+
+           <video controls> 
+               <source src="video/kwudev_premium.mp4" type="video/webm" />
+           </video>
+           <aside>
+                <div class="list-group">
+                    <p style="font-weight: bold; text-align: center;">Materi Priview</p>
+                    <ul>
+                           <a href=""><li>Perkenalan</li></a>
+                           <a href=""><li>Layout</li></a>
+                           <a href=""><li>Landing Page</li></a>
+                           <a href=""><li>Styling Navbar</li></a>
+                           <a href=""><li>Section Corousel</li></a>
+                           <a href=""><li>Section Footer</li></a>
+                           <a href=""><li>192 Video Lainnya <i class="fa fa-lock" aria-hidden="true"></i> </li></a>
+
+                       <a href="#bayar"> <button>IKUTI KELAS</button></a> 
+                    </ul>
+                </div>
+            <div class="clear"></div>
+           </aside>
+
+
+           <div class="content">
+                <h3>Tentang Kelas</h3>
+                <p>Kelas Full-Stack Web Developer yang mana kita akan mempelajari Website Development dengan Bootstrap dan Laravel
+
+                    Jika saat ini kamu sedang bingung untuk fokus kepada karir apa maka kelas ini cocok sekali karena kamu akan mempelajari banyak bidang.
+                    
+                    Setelah menyelesaikan kelas ini kamu dapat memilih apa yang akan kamu fokuskan sesuai dengan materi pada kelas ini.</p>
+                    <br> <br>
+                <h3>Kamu akan Mempelajari</h3>
+                    <table >
+                        <tr>
+                            <td> <i class="fa fa-check-circle" aria-hidden="true"></i> Belajar slicing dari hasil desain menggunakan HTML, CSS, dan Bootstrap</td>
+                            <td> <i class="fa fa-check-circle" aria-hidden="true"></i> Membangun aplikasi menggunakan PHP dan Framework Laravel</td>
+                        </tr>
+                        <tr>
+                            <td> <i class="fa fa-check-circle" aria-hidden="true"></i> Membuat fitur email konfirmasi pembayaran tiket travel</td>
+                            <td> <i class="fa fa-check-circle" aria-hidden="true"></i> membangun Database</td>
+                          
+                        </tr>
+                        <tr>
+                            <td> <i class="fa fa-check-circle" aria-hidden="true"></i> Mempelajari upload aplikasi ke hosting dan domain (Deployment)</td>
+                            <td> <i class="fa fa-check-circle" aria-hidden="true"></i> Mengintegrasikan Payment Gateway Midtrans untuk pembelian tiket travel</td>
+                        </tr>
+
+                    </table>
+                </div>
+            
+            <div class="spek">
+                
+                <h5>Sistem Operasi</h5>
+                <p> Win 7, 8, 10 / Mac OS / Linux</p>
+                <br>
+                <h5>RAM</h5>
+                <p>4 atau 8 Gigabyte</p>
+                <br>
+                <h5>Storage Kosong</h5>
+                <p>10 Gigabyte</p>
+                <br><br>
+                <button>Cetak Sertifikat <i class="fa fa-lock" aria-hidden="true"></i></button>
+
+
+            </div>
+            <div class="clear"></div>
+    </div>
+    <div class="background">
+
+
+    <article>
+    <div class="artc1">
+        <h3>Kenapa KWUDEV Cocok Untukmu</h3>
+        <br>
+        <p>Kini belajar terasa lebih mudah dan asyik</p>
+    </div>
+    <div class="artc2">
+        <table>
+            <tr>
+                <td>
+                    <i class="fa fa-book fa-2x" aria-hidden="true"></i>
+                    <h5>Studi Kasus</h5>
+                    <p>Up-To-Date</p>
+                </td>
+                <td>
+                    <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
+                    <h5>Kualitas Video</h5>
+                    <p>1080HD 60FPS</p>
+                </td>
+                <td>
+                    <i class="fa fa-sliders fa-2x" aria-hidden="true"></i>
+                    <h5>Modules</h5>
+                    <p>Dasar ke Expert</p>                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fa fa-commenting-o fa-2x" aria-hidden="true"></i>
+                    <h5>Konsultasi</h5>
+                    <p>Seumur Hidup</p>
+                </td>
+                <td>
+                    <i class="fa fa-language fa-2x" aria-hidden="true"></i>
+                    <h5>Bahasa</h5>
+                    <p>Bahasa Indonesia</p>
+                </td>
+                <td>
+                    <i class="fa fa-download fa-2x" aria-hidden="true"></i>
+                    <h5>Project</h5>
+                    <p>Untuk Portofolio</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fa fa-certificate fa-2x" aria-hidden="true"></i>
+                    <h5>Sertifikat</h5>
+                    <p>Kelulusan Kelas</p>
+                </td>
+                <td>
+                    <i class="fa fa-unlock-alt fa-2x" aria-hidden="true"></i>
+                    <h5>Akses Kelas</h5>
+                    <p>Seumur Hidup</p>
+                </td>
+                <td>
+                    <i class="fa fa-wifi fa-2x" aria-hidden="true"></i>
+                    <h5>Offline </h5>
+                    <p id="bayar">Dapat Diunduh</p>
+                </td>
+            </tr>
+        </table >
+    </div>    
+    <div class="clear" ></div>
+    </article>
+</div>
+<div class="pay" >
+    <div class="background3"></div>
+    <div class="content2">
+        <div class="card1">
+            <h3>Full-Stack Web Developer</h3>
+            <h1>Rp 250.000</h1>
+            <p>Sekali Bayar Untuk Selamanya</p>
+            <br>
+            <hr>
+            <table>
+                <tr>
+                    <td>Akses Selamanya</td>
+                    <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                </tr>
+                <tr>
+                    <td>Bonus Konsultasi</td>
+                    <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                </tr>
+                <tr>
+                    <td>Private Group</td>
+                    <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                </tr>
+                <tr>
+                    <td>Project Master</td>
+                    <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                </tr>
+                <tr>
+                    <td>Source Code</td>
+                    <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                </tr>
+                <tr>
+                    <td>Sertifikat Kelulusan</td>
+                    <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                </tr>
+                <tr>
+                    <td>Update Tutorial Terbaru</td>
+                    <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                </tr>
+            </table>
+        <hr>
+        <a href="pembayaran.html"><button>BELI KELAS</button></a>
+        </div>
+        <div class="card1">
+            <h3>Full-Stack Web Developer</h3>
+            <h1>Rp 0</h1>
+            <p>Berlangganan Harga Lebih Murah</p>
+            <br>
+            <hr>
+            <table>
+                <tr>
+                    <td>Akses Bulanan</td>
+                    <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                </tr>
+                <tr>
+                    <td>Bonus Konsultasi</td>
+                    <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                </tr>
+                <tr>
+                    <td>Private Group</td>
+                    <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                </tr>
+                <tr>
+                    <td>Project Master</td>
+                    <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                </tr>
+                <tr>
+                    <td>Source Code</td>
+                    <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                </tr>
+                <tr>
+                    <td>Sertifikat Kelulusan</td>
+                    <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                </tr>
+                <tr>
+                    <td>Update Tutorial Terbaru</td>
+                    <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                </tr>
+            </table>
+        <hr>
+        <button>BELI KELAS</button>
+        </div>
+
+  
+    </div>
+
+    <div class="bot">
+        <div class="fullktk">
+            <img src="images/KWUDEV.png" alt="">
+             <p>Belajar online bersama materi
+                 terkait code, design, programming,
+                 dan karir di bidang IT.</p>
+         </div>       
+         <div class="ktk">
+             <div class="ktk1"><h3>Bantuan</h3>
+                 <ul>
+                     <li><a href="">Cek Sertifikat</a></li>
+                     <li><a href="">Cara Belajar Online</a></li>
+                     <li><a href="">Tata Cara Order</a></li>
+                     <li><a href="">Cara Dapat Sertifikat</a></li>
+                     <li><a href="">Kebijakan Privasi</a></li>
+                 </ul>
+             </div>
+             <div class="ktk2">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="">Biaya Belajar Online</a></li>
+                    <li><a href="">Donasi Bersama</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+             </div>
+             <div class="ktk3">
+                 <h3>Office</h3>
+                 <ul>
+                     <li><a href="">Kwudev@gmail.com</a></li>
+                     <li><a href="">Yogyakarta, Indonesia</a></li>
+                 </ul>
+             </div>
+             <div class="ktk4">
+                 <h3>Sosial</h3>
+                 <ul>
+                     <li><a href="">Instagram</a></li>
+                     <li><a href="">Telegram</a></li>
+                     <li><a href="">YouTube</a></li>
+                 </ul>                   
+             </div>
+         </div>
+                    <div class="clear"></div>
+    </div>
+</div>
+<footer>
+    <p>©2020 Kwudev • All rights reserved • Love from Yogyakarta</p>
+</footer>
+ 
+</body>
+</html>

@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: montserrat,sans-serif;
+        }
+        main{
+            background-color:#0f0e20 ;
+            padding-top: 30px;
+            height: 540px;
+
+        }
+          /* logo */
+          .logo img{
+            width: 70px;
+            float: left;
+        }
+
+        
+        /* navigasi */
+        .nav {float: right;          
+             padding:0px;
+             font-size: 18px;
+             
+            
+         }
+         .nav ul li .active {
+            color: orangered;
+            
+        }
+
+         .nav span{
+            background-color:#2b50b4;
+            color: white;
+            padding:2px;
+            width: 50px;
+            border-radius: 3px;
+            display: inline;
+            
+        }
+         .clear{clear: both;}
+         .nav :nth-child(4){
+             margin-right: -21px;
+         }
+         .nav :nth-child(3){
+             position: relative;
+             display: inline-block;
+         }
+         .nav :nth-child(5){
+             position: relative;
+             display: inline-block;        
+         }
+         
+
+         .nav :nth-child(3):hover .dropdown-child ul{
+             display: block;
+         }
+         .nav :nth-child(5):hover .dropdown-child2 ul{
+             display: block;
+         }
+         .nav ul{
+             line-height: 39px;
+         }
+         .nav ul li{
+             display: inline-block;
+             margin-left: 40px;
+         }
+         .nav a{
+            text-decoration: none;
+             color: white;
+             
+             
+         }
+         .dropdown-child{
+             position: absolute;
+             width: 115px;
+         }
+         .dropdown-child2{
+             position: absolute;
+             width: 155px;
+         }
+         .dropdown-child ul  {
+            display: none;
+            background-color:#f8f9fa;
+            text-align: left;
+            margin-left: -10px;
+            height: 90px;
+            padding: 10px;
+            border-radius: 4px;
+         }
+         .dropdown-child2 ul  {
+            display: none;
+            background-color:#f8f9fa;
+            text-align: left;
+            margin-left: -10px;
+            height: 140px;
+            padding: 10px;
+            border-radius: 4px;
+         }
+         .dropdown-child a{
+            color: black;
+            font-size: 17px;
+         }
+         .dropdown-child2 a{
+            color: black;
+            font-size: 17px;
+         }
+         .dropdown-child ul li{
+            margin-left: 20px;
+            margin-bottom: 10px;
+         }
+         .dropdown-child2 ul li{
+            margin-left: 20px;
+            margin-bottom: 10px;
+         }
+
+         .dropdown-child li:hover{
+             background-color: #d7f7f5;
+            
+         }
+         .dropdown-child2 li:hover{
+             background-color: #d7f7f5;
+            
+         }
+         .unnamed{
+            background-image: url("images/unnamed.png");
+            width: 40px;
+            height: 40px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            float: left;
+            border-radius: 27px;
+            margin-right: 10px;
+            line-height: 10px;
+         }
+
+
+
+
+        /* jumbotron */
+        .jumbotron{
+            text-align: center;
+            color: white;
+            margin: 0 130px;
+            height: 500px;
+        }
+        .jumbotron p{
+            color:grey;
+        }
+        .jumbotron h3{
+            margin-top:40px;
+            font-size: 30px;
+        }
+        /* search */
+        
+        .search{
+            width: 480px;
+            height: 40px;
+            background-color: #232235;
+            border: 0px solid;
+            color: white;
+            padding: 5px;
+        }
+
+        /* category */
+        .category{
+            margin: 20px auto;
+            width: 560px;
+        }
+        .category::after{
+            content: "";
+            clear: left;
+            display: table;
+        }
+        .category p{
+            float: left;
+            line-height: 40px;
+
+        }
+        .category .menu-bar{
+            float: left;
+            display: flex;
+
+        }
+
+        /* menubar */
+        .menu-bar a{
+            text-decoration: none;
+        }
+        .menu-bar button{
+            width: 150px;            
+            display: inline;
+            margin-left: 10px;
+            height: 40px;
+            padding:4px;
+            border:  0px solid;
+            border-radius: 4px;
+            background-color: #232235;
+            color:grey;
+            font-size: 15px;
+        }
+        .menu-bar .active-menubar{
+            background-color: #2b50b4;
+            color: white;
+        }
+
+    
+
+/* CONTAINER */
+        .container{
+            /* border: 1px solid red; */
+            position: relative;
+            background-color: #fefaf6;
+            z-index: 1;
+            
+
+        }
+        .content{
+            /* border:1px solid blue; */
+            width: 1000px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+        }
+        
+         .content a {
+            width: 307px;
+            border: 1px solid #cccccc;
+            height: 400px;
+            border-radius: 10px;
+            background-color: white;
+            margin-bottom: 40px;
+            text-decoration: none;
+            padding: 12px;
+            box-sizing: border-box;
+            
+        }  
+        .content a:hover{
+            box-shadow: 2px 1px 15px 1px rgba(0,0,0,0.1);
+        }
+        .container .jumbotron2{
+            background-color:#0f0e20 ;
+
+            position: absolute;
+            height: 120px;
+            width:100%;
+            
+            z-index: -3;
+        }
+
+        /* isi kontent */
+        .content a:hover .eye .fa{
+            opacity: 0.5;
+        }
+
+        .gambar{
+            border: 0px solid;
+            border-radius: 5px;
+            height: 172px;
+            overflow: hidden;
+            position: relative;
+            box-sizing: border-box;
+        }
+        
+        .eye .fa{ 
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 174px;        
+            text-align: center;
+            line-height: 172px;
+            color: white;
+            transition: .2s;
+            opacity: 0;
+            background-color: black;
+        }   
+        
+
+        .daftar::after{
+            content: '';
+            clear: both;
+            display: block;
+        }
+        .daftar{
+            margin-top: 20px;
+        }
+        
+        .daftar p{
+            float: left;
+            color: black;
+            opacity: 0.9.9;
+            font-size: 17px;
+            
+        }
+        .daftar span{
+            float: right;
+            background-color: #f4caae;
+            padding: 4px;
+            font-size: 12px;
+            color: brown;
+            border-radius: 3px;
+        }
+        .content a hr{
+            width: 280px;
+            margin: 8px auto;
+            color: grey;
+            opacity: 0.2;
+        }
+
+
+        .daftar2{
+            margin-bottom: 20px;
+        }
+        .daftar2 .fa{
+            margin-bottom: 10px;
+        }
+        .fa-certificate{
+            color: #ffc107;
+        }
+        .fa-commenting{
+            color: #2b50b4;
+        }
+        .fa-check-circle{
+            color: #1abc9c;
+        }
+        .fa span{
+            color: black;
+            opacity: 0.8;
+        }
+        .daftar .paket{
+            background-color:lightskyblue;
+            color: mediumblue;
+            border-radius: 3px;
+            padding: 4px;
+            text-align: center;
+        }
+
+        .price{
+            color:#0f0e20;
+            text-align: center;    
+            font-size: 23px;
+            opacity: 0.8;
+        }
+
+        /* kelas paket */
+        .price2{
+            color:#0f0e20;
+            text-align: center;    
+            font-size: 23px;
+            opacity: 0.8;
+        }
+        .daftar .free{
+            background-color:#6dbd82; 
+            padding: 4px;
+            text-align: center;
+            color: white;
+        }
+
+        /* kotak */
+        article{
+            width: 1000px;
+            box-sizing: border-box;
+            margin: 20px 300px;
+            
+        }
+        article h3{
+            margin-bottom: 14px;
+            opacity: 0.8;
+        }
+        article a{
+            text-decoration: none;
+            color: #bdbdbd;
+            margin-bottom: 10px;
+            display: block;
+        }
+        article a:hover {
+            text-decoration: underline;
+        }
+        article ul{
+            list-style-type:none ;
+        }
+        .fullktk img{
+            width: 40px;
+            margin-bottom: 10px;
+            
+        }
+        .fullktk{
+            box-sizing: border-box;
+
+            border: 0px solid;
+            float: left;
+            width: 280px;
+            height: 400px;
+            color: #bdbdbd;
+
+        }
+        .ktk{
+            width: 693px;
+            height: 400px;
+            float: right;
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            
+        }  
+        .ktk1{
+            border: 0px solid;
+            width: 50%;
+            height: 50%;
+            box-sizing: border-box;
+        }
+      
+        .ktk2{
+            width: 50%;
+            height: 50%;
+            box-sizing: border-box;
+        }
+        .ktk3{
+            border: 0px solid;
+            width: 50%;
+            height: 50%;
+            box-sizing: border-box;
+        }
+        .ktk4{
+            border: 0px solid;
+            width: 50%;
+            height: 50%;
+            box-sizing: border-box;
+        }
+
+        /* footer */
+        footer{
+            font-size:15px;
+            margin-top: 10px;
+            color: #bdbdbd ;
+            text-align: center;
+            margin-bottom: 50px;
+            background-color: #fefaf6;
+        }
+
+ 
+        
+
+
+
+
+
+
+
+
+        
+
+    </style>
+    
+</head>
+<body>
+    <main> 
+        <div class="jumbotron">
+            <div class="logo"><img src="images/KWUDEV.png" alt=""></div>  
+            <div class="nav">
+               <ul>
+                   <li><a href="langganan.html">Langganan <span>New</span></a></li>
+                   <li><a href="beranda.html" class="active">Kelas</a></li>
+                   <li><div class="dropdown">Belajar<i class="fa fa-sort-desc " aria-hidden="true" style="margin-left:2px;"></i></div> 
+                        <div class="dropdown-child">
+                            <ul>
+                                <li><a href="">Skill Path</a></li>
+                                <li><a href="">Sertifikat</a></li>
+                            </ul>  
+                        </div>
+                   </li> 
+                   <li>|</li>
+                   <li><a href=""><div class="unnamed"></div> Hi, Alfian Aji <i class="fa fa-sort-desc " aria-hidden="true" style="margin-left:2px;"></i></a>
+                    <div class="dropdown-child2">
+                        <ul>
+                            <li><a href="">Akun Saya</a></li>
+                            <li><a href="">Pengaturan</a></li>
+                            <li><a href="">Log Out</a></li>
+                        </ul>  
+                    </div>
+                   </li>
+               </ul>
+            </div>
+            <div class="clear"></div>
+            <br>
+          <h3>SELAMAT DATANG DI KWUDEV</h3>
+            <br><br><br><br><br>
+          <p>Jangan mau kalah update dengan yang lainnya</p>.
+          <p>Yuk ikuti perkembangan teknologi.</p>
+          <br><br>
+
+          <!-- search -->
+          <form action="">              
+              <input type="text" class="search" placeholder="   Mau belajar apa lagi hari ini?">
+          </form>
+          <br>
+        <div class="category">
+            <p>by category :</p>
+            <div class="menu-bar">
+                <a href=""><button class="active-menubar" style="width:80px">SEMUA</button></a>
+                <a href=""><button style="width: 120px;">KELAS GRATIS</button></a>
+                <a href=""><button style="width: 110px;">KELAS PAKET</button></a>
+                <a href=""><button style="width: 110px;">KELAS PREMIUM</button></a>
+              </div>
+        </div>
+        </div>
+    </main>
+    <!-- container -->
+    <div class="container">
+        <div class="jumbotron2"></div>
+        <div class="content">
+            <!-- 1 -->
+            <a href="materi.html">
+                <div class="gambar">
+                    <img src="images/frontend-web-developer.png" alt="" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>Full-Stack Web Developer</p> 
+                    <span>PREMIUM</span>   
+                </div>
+                <hr>
+                <div class="daftar2">
+                    <i class="fa fa-certificate " aria-hidden="true"> <span> Sertifikat</span></i><br>
+                    <i class="fa fa-commenting " aria-hidden="true"> <span> Konsultasi</span></i>
+                    <i class="fa fa-check-circle" aria-hidden="true"> <span> Bayar Sekali Akses Selamanya</span></i>
+                </div>
+                <hr>
+                <div class="price">
+                    <p>Rp.250.000</p>
+                </div>
+            </a>
+            <!-- 2 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/full-stack javascript developer.png" alt="" width="280px">
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>Full-Stack javascript Dev...</p> 
+                    <span>PREMIUM</span>   
+                </div>
+                <hr>
+                <div class="daftar2">
+                    <i class="fa fa-certificate " aria-hidden="true"> <span> Sertifikat</span></i><br>
+                    <i class="fa fa-commenting " aria-hidden="true"> <span> Konsultasi</span></i>
+                    <i class="fa fa-check-circle" aria-hidden="true"> <span> Bayar Sekali Akses Selamanya</span></i>
+                </div>
+                <hr>
+                <div class="price">
+                    <p>Rp.380.000</p>
+                </div>
+            </a>
+            <!-- 3 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/web tiket saya.png" alt="" width="281px" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>Web Tiket Saya</p> 
+                    <span>PREMIUM</span>   
+                </div>
+                <hr>
+                <div class="daftar2">
+                    <i class="fa fa-certificate " aria-hidden="true"> <span> Sertifikat</span></i><br>
+                    <i class="fa fa-commenting " aria-hidden="true"> <span> Konsultasi</span></i>
+                    <i class="fa fa-check-circle" aria-hidden="true"> <span> Bayar Sekali Akses Selamanya</span></i>
+                </div>
+                <hr>
+                <div class="price">
+                    <p>Rp.200.000</p>
+                </div>
+            </a>
+            <!-- 4 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/full-stack web laravel.png" alt="" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>Full-Stack Web Laravel Vu...</p> 
+                    <span>PREMIUM</span>   
+                </div>
+                <hr>
+                <div class="daftar2">
+                    <i class="fa fa-certificate " aria-hidden="true"> <span> Sertifikat</span></i><br>
+                    <i class="fa fa-commenting " aria-hidden="true"> <span> Konsultasi</span></i>
+                    <i class="fa fa-check-circle" aria-hidden="true"> <span> Bayar Sekali Akses Selamanya</span></i>
+                </div>
+                <hr>
+                <div class="price">
+                    <p>Rp.350.000</p>
+                </div>
+            </a>
+            <!-- 5 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/website kuliner menggunakan React Js.png" alt="" width="282px" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>Web kuliner(React Js)</p> 
+                    <span>PREMIUM</span>   
+                </div>
+                <hr>
+                <div class="daftar2">
+                    <i class="fa fa-certificate " aria-hidden="true"> <span> Sertifikat</span></i><br>
+                    <i class="fa fa-commenting " aria-hidden="true"> <span> Konsultasi</span></i>
+                    <i class="fa fa-check-circle" aria-hidden="true"> <span> Bayar Sekali Akses Selamanya</span></i>
+                </div>
+                <hr>
+                <div class="price">
+                    <p>Rp.200.000</p>
+                </div>
+            </a>
+            <!-- 5 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/fullstack react native.png" alt="" width="282px" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>Full-Stack React Native D...</p> 
+                    <span>PREMIUM</span>   
+                </div>
+                <hr>
+                <div class="daftar2">
+                    <i class="fa fa-certificate " aria-hidden="true"> <span> Sertifikat</span></i><br>
+                    <i class="fa fa-commenting " aria-hidden="true"> <span> Konsultasi</span></i>
+                    <i class="fa fa-check-circle" aria-hidden="true"> <span> Bayar Sekali Akses Selamanya</span></i>
+                </div>
+                <hr>
+                <div class="price">
+                    <p>Rp.200.000</p>
+                </div>
+            </a>
+            <!-- 5 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/e-commerce.png" alt="" width="282px" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>E-Commerce (Front-End)</p> 
+                    <span>PREMIUM</span>   
+                </div>
+                <hr>
+                <div class="daftar2">
+                    <i class="fa fa-certificate " aria-hidden="true"> <span> Sertifikat</span></i><br>
+                    <i class="fa fa-commenting " aria-hidden="true"> <span> Konsultasi</span></i>
+                    <i class="fa fa-check-circle" aria-hidden="true"> <span> Bayar Sekali Akses Selamanya</span></i>
+                </div>
+                <hr>
+                <div class="price">
+                    <p>Rp.200.000</p>
+                </div>
+            </a>
+            <!-- 5 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/sistem perusahaan.png" alt="" width="282px" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>Sistem Perusahaan</p> 
+                    <span>PREMIUM</span>   
+                </div>
+                <hr>
+                <div class="daftar2">
+                    <i class="fa fa-certificate " aria-hidden="true"> <span> Sertifikat</span></i><br>
+                    <i class="fa fa-commenting " aria-hidden="true"> <span> Konsultasi</span></i>
+                    <i class="fa fa-check-circle" aria-hidden="true"> <span> Bayar Sekali Akses Selamanya</span></i>
+                </div>
+                <hr>
+                <div class="price">
+                    <p>Rp.240.000</p>
+                </div>
+            </a>
+            <!-- 5 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/fullstck android.png" alt="" width="284px" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>Full-Stack Android Dev...</p> 
+                    <span>PREMIUM</span>   
+                </div>
+                <hr>
+                <div class="daftar2">
+                    <i class="fa fa-certificate " aria-hidden="true"> <span> Sertifikat</span></i><br>
+                    <i class="fa fa-commenting " aria-hidden="true"> <span> Konsultasi</span></i>
+                    <i class="fa fa-check-circle" aria-hidden="true"> <span> Bayar Sekali Akses Selamanya</span></i>
+                </div>
+                <hr>
+                <div class="price">
+                    <p>Rp.280.000</p>
+                </div>
+            </a>
+            <!-- 6 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/bootstrap.png" alt="" width="280px" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>Landing Page(bootstrap 4)</p> 
+                    <span class="paket">PAKET</span>   
+                </div>
+                <hr>
+                <div class="daftar2">
+                    
+                    <i class="fa fa-commenting " aria-hidden="true"> <span> Konsultasi</span></i>
+                    <i class="fa fa-hourglass-half" aria-hidden="true"> <span>Akses Semua Kelas Paket</span></i>
+                </div>
+                <br>
+                <hr >
+            
+                <div class="price2">
+                    <p>Rp.100.000/Bulan</p>
+                </div>
+            </a>
+            <!-- 7 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/ci4.png" alt="" width="280px" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>CRUD pemula (Codeigniter 4)</p> 
+                    <span class="paket">PAKET</span>   
+                </div>
+                <hr>
+                <div class="daftar2">
+                    
+                    <i class="fa fa-commenting " aria-hidden="true"> <span> Konsultasi</span></i>
+                    <i class="fa fa-hourglass-half" aria-hidden="true"> <span>Akses Semua Kelas Paket</span></i>
+                </div>
+                <br>
+                <hr >
+            
+                <div class="price2">
+                    <p>Rp.100.000/Bulan</p>
+                </div>
+            </a>
+            <!-- 8 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/oop php.png" alt="" width="310px">
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>konsep dasara OOP (PHP)</p> 
+                    <span class="paket">PAKET</span>   
+                </div>
+                <hr>
+                <div class="daftar2">
+                    
+                    <i class="fa fa-commenting " aria-hidden="true"> <span> Konsultasi</span></i>
+                    <i class="fa fa-hourglass-half" aria-hidden="true"> <span>Akses Semua Kelas Paket</span></i>
+                </div>
+                <br>
+                <hr >
+            
+                <div class="price2">
+                    <p>Rp.100.000/Bulan</p>
+                </div>
+            </a>
+            <!-- 9 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/laravel 8.png" alt="" width="307px" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>Belajar Laravel 8</p> 
+                    <span class="paket">PAKET</span>   
+                </div>
+                <hr>
+                <div class="daftar2">
+                    
+                    <i class="fa fa-commenting " aria-hidden="true"> <span> Konsultasi</span></i>
+                    <i class="fa fa-hourglass-half" aria-hidden="true"> <span>Akses Semua Kelas Paket</span></i>
+                </div>
+                <br>
+                <hr >
+            
+                <div class="price2">
+                    <p>Rp.100.000/Bulan</p>
+                </div>
+            </a>
+            <!-- 10 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/vue js.png" alt="" width="310px" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>Belajar Vue Js</p> 
+                    <span class="paket">PAKET</span>   
+                </div>
+                <hr>
+                <div class="daftar2">
+                    
+                    <i class="fa fa-commenting " aria-hidden="true"> <span> Konsultasi</span></i>
+                    <i class="fa fa-hourglass-half" aria-hidden="true"> <span>Akses Semua Kelas Paket</span></i>
+                </div>
+                <br>
+                <hr >
+            
+                <div class="price2">
+                    <p>Rp.100.000/Bulan</p>
+                </div>
+            </a>
+            <!-- 10 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/reactjs.png" width="280px" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>Belajar React Js</p> 
+                    <span class="paket">PAKET</span>   
+                </div>
+                <hr>
+                <div class="daftar2">
+                    
+                    <i class="fa fa-commenting " aria-hidden="true"> <span> Konsultasi</span></i>
+                    <i class="fa fa-hourglass-half" aria-hidden="true"> <span>Akses Semua Kelas Paket</span></i>
+                </div>
+                <br>
+                <hr >
+            
+                <div class="price2">
+                    <p>Rp.100.000/Bulan</p>
+                </div>
+            </a>
+            <!-- 10 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/nodejs.png" width="280px" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>Belajar Node JS</p> 
+                    <span class="paket">PAKET</span>   
+                </div>
+                <hr>
+                <div class="daftar2">
+                    
+                    <i class="fa fa-commenting " aria-hidden="true"> <span> Konsultasi</span></i>
+                    <i class="fa fa-hourglass-half" aria-hidden="true"> <span>Akses Semua Kelas Paket</span></i>
+                </div>
+                <br>
+                <hr >
+            
+                <div class="price2">
+                    <p>Rp.100.000/Bulan</p>
+                </div>
+            </a>
+            <!-- 10 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/sistem poling.png" width="280px" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                
+                <div class="daftar">
+                    <p>Sistem Poling (Vue Js,Laravel)</p> 
+                    <span class="paket">PAKET</span>   
+                </div>
+                <hr>
+                <div class="daftar2">
+                    <i class="fa fa-commenting " aria-hidden="true"> <span> Konsultasi</span></i>
+                    <i class="fa fa-hourglass-half" aria-hidden="true"> <span>Akses Semua Kelas Paket</span></i>
+                </div>
+                <br>
+                <hr >
+            
+                <div class="price2">
+                    <p>Rp.100.000/Bulan</p>
+                </div>
+            </a>
+            <!-- 10 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/game hindari motor.png" width="250px" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>Membuat game hindari motor</p> 
+                    <span class="paket">PAKET</span>   
+                </div>
+                <hr>
+                <div class="daftar2">
+                    
+                    <i class="fa fa-commenting " aria-hidden="true"> <span> Konsultasi</span></i>
+                    <i class="fa fa-hourglass-half" aria-hidden="true"> <span>Akses Semua Kelas Paket</span></i>
+                </div>
+                <br>
+                <hr >
+                <div class="price2">
+                    <p>Rp.100.000/Bulan</p>
+                </div>
+            </a>
+            <!-- 10 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/game samakan kartu.png" width="276px" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>Game samakan Kartu</p> 
+                    <span class="paket">PAKET</span>   
+                </div>
+                <hr>
+                <div class="daftar2">
+                    
+                    <i class="fa fa-commenting " aria-hidden="true"> <span> Konsultasi</span></i>
+                    <i class="fa fa-hourglass-half" aria-hidden="true"> <span>Akses Semua Kelas Paket</span></i>
+                </div>
+                <br>
+                <hr >
+            
+                <div class="price2">
+                    <p>Rp.100.000/Bulan</p>
+                </div>
+            </a>
+            <!-- 10 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/kalkulator javascript.png" width="276px" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>Javascript Kalkulator</p> 
+                    <span class="paket">PAKET</span>   
+                </div>
+                <hr>
+                <div class="daftar2">
+                    
+                    <i class="fa fa-commenting " aria-hidden="true"> <span> Konsultasi</span></i>
+                    <i class="fa fa-hourglass-half" aria-hidden="true"> <span>Akses Semua Kelas Paket</span></i>
+                </div>
+                <br>
+                <hr >
+            
+                <div class="price2">
+                    <p>Rp.100.000/Bulan</p>
+                </div>
+            </a>
+            <!-- 10 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/verifiikasi email.png" width="253px" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>Otentikasi & Verifikasi Email</p> 
+                    <span class="paket">PAKET</span>   
+                </div>
+                <hr>
+                <div class="daftar2">
+                    
+                    <i class="fa fa-commenting " aria-hidden="true"> <span> Konsultasi</span></i>
+                    <i class="fa fa-hourglass-half" aria-hidden="true"> <span>Akses Semua Kelas Paket</span></i>
+                </div>
+                <br>
+                <hr >
+            
+                <div class="price2">
+                    <p>Rp.100.000/Bulan</p>
+                </div>
+            </a>
+            <!-- 11 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/html5.png" alt="" width="280px" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>HTML Introduction</p> 
+                    <span class="free">FREE</span>   
+                </div>
+                <hr>
+                <div class="daftar2">
+                    <i class="fa fa-hourglass-half" aria-hidden="true"> <span>Akses Selamanya</span></i>
+                </div>
+                <br><br><br>
+                <hr >
+            
+                <div class="price2">
+                    <p>FREE</p>
+                </div>
+            </a>
+            <!-- 12 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/css3.png" width="290px" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>CSS Introduction</p> 
+                    <span class="free">FREE</span>   
+                </div>
+                <hr>
+                <div class="daftar2"> 
+                    <i class="fa fa-hourglass-half" aria-hidden="true"> <span>Akses Selamanya</span></i>
+                </div>
+                <br><br><br>
+                <hr >
+            
+                <div class="price2">
+                    <p>FREE</p>
+                </div>
+            </a>
+            <!-- 13 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/js.png" width="280px" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>Belajar Fundamental Javascript</p> 
+                    <span class="free">FREE</span>   
+                </div>
+                <hr>
+                <div class="daftar2"> 
+                    <i class="fa fa-hourglass-half" aria-hidden="true"> <span>Akses Selamanya</span></i>
+                </div>
+                <br><br><br>
+                <hr >
+            
+                <div class="price2">
+                    <p>FREE</p>
+                </div>
+            </a>
+            <!-- 14 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/git.png" width="290px" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>GitHub</p> 
+                    <span class="free">FREE</span>   
+                </div>
+                <hr>
+                <div class="daftar2"> 
+                    <i class="fa fa-hourglass-half" aria-hidden="true"> <span>Akses Selamanya</span></i>
+                </div>
+                <br><br><br>
+                <hr >
+            
+                <div class="price2">
+                    <p>FREE</p>
+                </div>
+            </a>
+            <!-- 15 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/docker.png" width="290px" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>Docker</p> 
+                    <span class="free">FREE</span>   
+                </div>
+                <hr>
+                <div class="daftar2"> 
+                    <i class="fa fa-hourglass-half" aria-hidden="true"> <span>Akses Selamanya</span></i>
+                </div>
+                <br><br><br>
+                <hr >
+            
+                <div class="price2">
+                    <p>FREE</p>
+                </div>
+            </a>
+            <!-- 15 -->
+            <a href="">
+                <div class="gambar">
+                    <img src="images/bostrp intro.png" width="260px" >
+                    <span class="eye">
+                        <i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="daftar">
+                    <p>Bootstrap Introduction</p> 
+                    <span class="free">FREE</span>   
+                </div>
+                <hr>
+                <div class="daftar2"> 
+                    <i class="fa fa-hourglass-half" aria-hidden="true"> <span>Akses Selamanya</span></i>
+                </div>
+                <br><br><br>
+                <hr >
+                <div class="price2">
+                    <p>FREE</p>
+                </div>
+            </a>
+        </div>
+        
+        <hr style="margin-top: 100px; margin-bottom: 70px; border: 1px solid #ebebeb;">
+
+        <article>
+            <div class="fullktk">
+               <img src="images/KWUDEV.png" alt="">
+                <p>Belajar online bersama materi
+                    terkait code, design, programming,
+                    dan karir di bidang IT.</p>
+            </div>       
+            <div class="ktk">
+                <div class="ktk1"><h3>Bantuan</h3>
+                    <ul>
+                        <li><a href="">Cek Sertifikat</a></li>
+                        <li><a href="">Cara Belajar Online</a></li>
+                        <li><a href="">Tata Cara Order</a></li>
+                        <li><a href="">Cara Dapat Sertifikat</a></li>
+                        <li><a href="">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+                <div class="ktk2">
+                   <h3>Explore</h3>
+                   <ul>
+                       <li><a href="">Biaya Belajar Online</a></li>
+                       <li><a href="">Donasi Bersama</a></li>
+                       <li><a href="">Contact Us</a></li>
+                   </ul>
+                </div>
+                <div class="ktk3">
+                    <h3>Office</h3>
+                    <ul>
+                        <li><a href="">Kwudev@gmail.com</a></li>
+                        <li><a href="">Yogyakarta, Indonesia</a></li>
+                    </ul>
+                </div>
+                <div class="ktk4">
+                    <h3>Sosial</h3>
+                    <ul>
+                        <li><a href="">Instagram</a></li>
+                        <li><a href="">Telegram</a></li>
+                        <li><a href="">YouTube</a></li>
+                    </ul>                   
+                </div>
+            </div>
+                       <div class="clear"></div>
+        </article>
+    </div> 
+    <footer>
+        <p>©2020 Kwudev • All rights reserved • Love from Yogyakarta</p>
+    </footer>
+    <script>
+
+
+
+    </script>
+</body>
+</html>

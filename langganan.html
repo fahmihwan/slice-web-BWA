@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: montserrat,sans-serif;
+        }
+        body{
+             background-color: #fdf8f3;
+        }
+        main{
+            background-color:#0f0e20 ;
+            padding-top: 30px;
+            height: 490px;
+
+        }
+          /* logo */
+          .logo img{
+            width: 70px;
+            float: left;
+        }
+
+        
+        /* navigasi */
+        .nav {float: right;          
+             padding:0px;
+             font-size: 18px;
+             
+            
+         }
+         .nav ul li .active {
+            color: orangered;
+            
+        }
+
+         .nav span{
+            background-color:#2b50b4;
+            color: white;
+            padding:2px;
+            width: 50px;
+            border-radius: 3px;
+            display: inline;
+            
+        }
+         .clear{clear: both;}
+         .nav :nth-child(4){
+             margin-right: -21px;
+         }
+         .nav :nth-child(3){
+             position: relative;
+             display: inline-block;
+         }
+         .nav :nth-child(5){
+             position: relative;
+             display: inline-block;        
+         }
+         
+
+         .nav :nth-child(3):hover .dropdown-child ul{
+             display: block;
+         }
+         .nav :nth-child(5):hover .dropdown-child2 ul{
+             display: block;
+         }
+         .nav ul{
+             line-height: 39px;
+         }
+         .nav ul li{
+             display: inline-block;
+             margin-left: 40px;
+         }
+         .nav a{
+            text-decoration: none;
+             color: white;
+             
+             
+         }
+         .dropdown-child{
+             position: absolute;
+             width: 115px;
+         }
+         .dropdown-child2{
+             position: absolute;
+             width: 155px;
+         }
+         .dropdown-child ul  {
+            display: none;
+            background-color:#f8f9fa;
+            text-align: left;
+            margin-left: -10px;
+            height: 90px;
+            padding: 10px;
+            border-radius: 4px;
+         }
+         .dropdown-child2 ul  {
+            display: none;
+            background-color:#f8f9fa;
+            text-align: left;
+            margin-left: -10px;
+            height: 140px;
+            padding: 10px;
+            border-radius: 4px;
+         }
+         .dropdown-child a{
+            color: black;
+            font-size: 17px;
+         }
+         .dropdown-child2 a{
+            color: black;
+            font-size: 17px;
+         }
+         .dropdown-child ul li{
+            margin-left: 20px;
+            margin-bottom: 10px;
+         }
+         .dropdown-child2 ul li{
+            margin-left: 20px;
+            margin-bottom: 10px;
+         }
+
+         .dropdown-child li:hover{
+             background-color: #d7f7f5;
+            
+         }
+         .dropdown-child2 li:hover{
+             background-color: #d7f7f5;
+            
+         }
+         .unnamed{
+            background-image: url("images/unnamed.png");
+            width: 40px;
+            height: 40px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            float: left;
+            border-radius: 27px;
+            margin-right: 10px;
+            line-height: 10px;
+         }
+
+
+
+
+        /* jumbotron */
+        .jumbotron{
+            text-align: center;
+            color: white;
+            margin: 0 130px;
+            height: 500px;
+
+        }
+        .jumbotron p{
+            color:grey;
+        }
+        .jumbotron h3{
+            margin-top:40px;
+            font-size: 30px;
+        }
+        
+.jumbotron2{
+    background-color:#0f0e20 ;
+    position: absolute;
+    z-index: -2;
+    height: 200px;
+    width: 100%;
+
+}
+        
+
+/* CONTAINER */
+        
+       .container{
+            margin-top: 110px;
+        }
+        .fullbox{
+            height: 700px;
+            display: flex;
+            margin: 0px 100px;
+            justify-content: space-between;            
+        }
+        .fullbox p{
+            margin-top: 10px;
+            text-align: left;
+            margin-left: 20px;
+        }
+        
+        .fullbox button{
+            width: 380px;
+            height: 40px;
+            margin-top: 10px;
+            background-color: #2b50b4;
+            color: white;
+            border: 0px solid;
+            border-radius: 5px;
+         }
+
+        .box1{
+            border-radius: 10px;
+            width: 47%;
+            background-color: white;
+            box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+
+        }
+        .box2{
+            border-radius: 10px;
+            width: 47%;
+            background-color: white;
+            box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+        }
+
+        .fullbox h1{
+            color: black;
+        }
+        
+
+        table{color: black;
+            text-align: left
+            
+        }
+        table tr td{
+            padding: 9px;
+
+        }
+        .cek{
+            text-align: right;
+            width: 145px;
+            color: #1abc9c;
+            }
+       .fullbox h1{
+            font-weight: normal;
+            color: #22233a;
+        }
+        .bulan{
+            font-size: 18px;
+            color: grey;
+            
+        }
+
+
+                /* kotak */
+        article{
+            width: 1000px;
+            box-sizing: border-box;
+            margin: 20px auto;
+            text-align: left;
+
+            
+        }
+        article h3{
+
+            opacity: 0.8;
+            color: black;
+            
+        }
+        article a{
+            text-decoration: none;
+            color: #bdbdbd;
+            margin-bottom: 10px;
+            display: block;
+        }
+        article a:hover {
+            text-decoration: underline;
+        }
+        article ul{
+            list-style-type:none ;
+        }
+        .fullktk img{
+            width: 40px;
+            margin-bottom: 10px;
+            
+        }
+        .fullktk{
+            box-sizing: border-box;
+
+            border: 0px solid;
+            float: left;
+            width: 280px;
+            height: 400px;
+            color: #bdbdbd;
+
+        }
+        .ktk{
+            width: 693px;
+            height: 400px;
+            float: right;
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+
+        }  
+        .ktk1{
+            border: 0px solid;
+            width: 50%;
+            height: 50%;
+            box-sizing: border-box;
+
+        }
+      
+        .ktk2{
+            width: 50%;
+            height: 50%;
+            box-sizing: border-box;
+
+        }
+        .ktk3{
+            border: 0px solid;
+            width: 50%;
+            height: 50%;
+            box-sizing: border-box;
+
+        }
+        .ktk4{
+            border: 0px solid;
+            width: 50%;
+            height: 50%;
+            box-sizing: border-box;
+
+        }
+
+        
+
+        /* footer */
+        footer{
+            font-size:15px;
+            margin-top: 100px;
+            line-height: 100px;
+            color: #bdbdbd ;
+            text-align: center;
+            margin-bottom: 50px;
+            background-color: #fefaf6;
+        }
+    </style>
+    
+</head>
+<body>
+    <main> 
+        <div class="jumbotron">
+            <div class="logo"><img src="images/KWUDEV.png" alt=""></div>  
+            <div class="nav">
+               <ul>
+                   <li><a href="langganan.html" class="active">Langganan <span>New</span></a></li>
+                   <li><a href="beranda.html">Kelas</a></li>
+                   <li><div class="dropdown">Belajar<i class="fa fa-sort-desc " aria-hidden="true" style="margin-left:2px;"></i></div> 
+                        <div class="dropdown-child">
+                            <ul>
+                                <li><a href="">Skill Path</a></li>
+                                <li><a href="">Sertifikat</a></li>
+                            </ul>  
+                        </div>
+                   </li> 
+                   <li>|</li>
+                   <li><a href=""><div class="unnamed"></div> Hi, Alfian Aji <i class="fa fa-sort-desc " aria-hidden="true" style="margin-left:2px;"></i></a>
+                    <div class="dropdown-child2">
+                        <ul>
+                            <li><a href="">Akun Saya</a></li>
+                            <li><a href="">Pengaturan</a></li>
+                            <li><a href="">Log Out</a></li>
+                        </ul>  
+                    </div>
+                   </li>
+               </ul>
+            </div>
+            <div class="clear"></div>
+            
+            <div class="container">
+                <h3>Gabung sekarang Juga</h3>
+                <br><br><br>
+                <p>Akses semua kelas berkualitas tinggi</p>
+                <p>dengan harga terjangkau di Kwudev.</p>
+            <br><br><br><br>
+            <div class="fullbox">
+                <div class="box1">
+                   
+                    <img src="images/newcomer.png" alt="" width="200px">
+                        <h1>IDR 300.000 <span class="bulan">/3bulan</span>  </h1> <br>
+                    <table>
+                        <tr>
+                            <td>Bebas Akses 2 Kelas premium</td>
+                            <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Bebas Belajar Selama 3 Bulan</td>
+                            <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Group Konsultasi</td>
+                            <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Bahan Belajar</td>
+                            <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Source Code</td>
+                            <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Website Portofolio</td>
+                            <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Design Project</td>
+                            <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Sertifikat Kelulusan</td>
+                            <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Update Tutorial Terbaru</td>
+                            <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                        </tr>
+                    </table>
+                    
+                    <hr width="380px" style="text-align: center; margin: 10px auto;">
+                    
+                    <button>Saya Mau Paket ini</button>
+                </div>
+                <div class="box2">
+                    <img src="images/newcomer2.png" alt="" width="200px" style="margin-top: 20px;">
+                        <br><br><br>
+                        <h1>IDR 550.000 <span class="bulan">/5bulan</span>  </h1>  <br>
+                        <table>
+                            <tr>
+                                <td>Bebas Akses 3 Kelas premium</td>
+                                <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Bebas Belajar Selama 5 Bulan</td>
+                                <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Group Konsultasi</td>
+                                <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Bahan Belajar</td>
+                                <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Source Code</td>
+                                <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Website Portofolio</td>
+                                <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Design Project</td>
+                                <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Sertifikat Kelulusan</td>
+                                <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Update Tutorial Terbaru</td>
+                                <td class="cek"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            </tr>
+                        </table>
+                    <hr width="380px" style="text-align: center; margin: 10px auto;">
+                    <button>Saya Mau Paket ini</button>
+                </div>
+                
+                
+    
+            </div>
+            <hr style="margin-top: 100px; margin-bottom: 0px; border: 1px solid #ebebeb;">
+            <article>
+                <div class="fullktk">
+                   <img src="images/KWUDEV.png" alt="">
+                    <p>Belajar online bersama materi
+                        terkait code, design, programming,
+                        dan karir di bidang IT.</p>
+                </div>       
+                <div class="ktk">
+                    <div class="ktk1"><h3 style="margin-top: 0px;">Bantuan</h3>
+                        <ul>
+                            <li><a href="">Cek Sertifikat</a></li>
+                            <li><a href="">Cara Belajar Online</a></li>
+                            <li><a href="">Tata Cara Order</a></li>
+                            <li><a href="">Cara Dapat Sertifikat</a></li>
+                            <li><a href="">Kebijakan Privasi</a></li>
+                        </ul>
+                    </div>
+                    <div class="ktk2">
+                       <h3 style="margin-top: 0px;">Explore</h3>
+                       <ul>
+                           <li><a href="">Biaya Belajar Online</a></li>
+                           <li><a href="">Donasi Bersama</a></li>
+                           <li><a href="">Contact Us</a></li>
+                       </ul>
+                    </div>
+                    <div class="ktk3">
+                        <h3 style="margin-top: 0px;">Office</h3>
+                        <ul>
+                            <li><a href="">Kwudev@gmail.com</a></li>
+                            <li><a href="">Yogyakarta, Indonesia</a></li>
+                        </ul>
+                    </div>
+                    <div class="ktk4">
+                        <h3 style="margin-top: 0px;">Sosial</h3> 
+                        <ul>
+                            <li><a href="">Instagram</a></li>
+                            <li><a href="">Telegram</a></li>
+                            <li><a href="">YouTube</a></li>
+                        </ul>                   
+                    </div>
+                </div>
+            <div class="clear"></div>
+            </article>    
+        </div>
+            
+            <footer>
+                <p>©2020 Kwudev • All rights reserved • Love from Yogyakarta</p>
+            </footer>
+        </div>
+
+      
+        </main>
+      
+</body>
+</html>
